@@ -244,16 +244,17 @@
     }
 
     /* Center the last section (features) */
-    .features {
-        flex-direction: column;
-        align-items: center; /* Centers all items */
-        text-align: center;
-    }
+.features {
+    flex-direction: column;
+    align-items: center; /* Centers all items */
+    text-align: center;
+    max-width: 80%; /* Ensures it does not take full width */
+    margin: 0 auto; /* Centers it */
+}
 
-    .feature-item {
-        width: 90%; /* Ensures the features section spans properly */
-        margin: 10px auto; /* Centers it */
-    }
+.feature-item {
+    width: 80%; /* Adjust width for a better look */
+    margin: 10px auto; /* Centers each feature item */
 }
 
     </style>
