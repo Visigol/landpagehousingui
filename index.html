@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://yourwebsite.com">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/jpg" href="favicon.jpg">
+    <link rel="icon" type="image/png" href="favicon.png">
 
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -28,6 +28,7 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            overflow-x: hidden; /* Prevents horizontal scrolling */
         }
 
         /* Header & Navigation */
@@ -38,6 +39,7 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #ddd;
+            position: relative;
         }
 
         .logo {
@@ -79,82 +81,42 @@
             cursor: pointer;
         }
 
-        /* Hero Section */
-        .hero {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: white;
-            padding: 50px 20px;
-            gap: 40px;
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            background: none;
+            border: none;
         }
 
-        .hero-text {
-            max-width: 500px;
-            text-align: left;
-        }
-
-        .hero-images {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .image-wrapper {
-            display: flex;
-            gap: 20px;
-        }
-
-        .image-wrapper img {
-            max-width: 600px;
-            height: 400px;
-            object-fit: contain;
-            border-radius: 10px;
-        }
-
-        /* Features Section */
-        .features {
-            display: flex;
-            justify-content: space-around;
-            padding: 50px 20px;
-            background: #f9f9f9;
-        }
-
-        .feature-item {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Screenshots Section */
-        .screenshots {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 50px 20px;
-        }
-
-        .screenshots img {
-            max-width: 600px;
-            border-radius: 10px;
-        }
-
-        /* Footer */
-        footer {
-            background: black;
-            color: white;
-            padding: 20px;
-        }
-
-        /* ========= MOBILE RESPONSIVENESS ========= */
         @media (max-width: 768px) {
-            /* Adjust navigation */
+            /* Fix floating page issue */
+            body {
+                overflow-x: hidden;
+            }
+
+            /* Mobile menu styling */
+            .menu-toggle {
+                display: block;
+                margin-right: 20px;
+            }
+
             nav ul {
+                display: none;
                 flex-direction: column;
+                position: absolute;
+                top: 70px;
+                right: 0;
+                background: white;
+                width: 100%;
                 text-align: center;
-                padding: 0;
+                padding: 10px 0;
+                border-top: 1px solid #ddd;
+            }
+
+            nav ul.show {
+                display: flex;
             }
 
             nav ul li {
@@ -212,6 +174,7 @@
         <div class="logo">
             <img src="logo.png" alt="Company Logo">
         </div>
+        <button class="menu-toggle">&#9776;</button>
         <nav>
             <ul>
                 <li><a href="features.html">Features</a></li>
@@ -226,7 +189,7 @@
             <h1>Revolutionary Automated Housing Check-In System</h1>
             <p>From reservation to check-in, guests experience a seamless, fully automated process. Hosts gain free time while ensuring an outstanding guest experience.</p>
             <p><strong>FULLY CUSTOMIZABLE TO THE NEEDS OF YOUR COMPANY</strong></p>
-            
+            <button class="btn secondary">Watch Video</button>
         </div>
         <div class="hero-images">
             <div class="image-wrapper">
@@ -238,10 +201,9 @@
 
     <section class="showcase">
         <h2>How It Works</h2>
-        <p>Our system automates the entire check-in process, sending door codes directly via the internet to smart locks (TTLock). </p>
-        <p>Guests receive their access codes via email and WhatsApp Business, eliminating the need for host intervention.</p>
+        <p>Our system automates the entire check-in process, sending door codes directly via the internet to smart locks (TTLock). Guests receive their access codes via email and WhatsApp Business, eliminating the need for host intervention.</p>
         <p>The system also automates email follow-ups to track guest satisfaction and feedback.</p>
-        <p><strong>Unlike competitors, our solution requires no monthly fees. Simply purchase a pack, and it’s yours forever—no ongoing payments per room count.</strong></p>
+        <p>Unlike competitors, our solution requires no monthly fees. Simply purchase a pack, and it’s yours forever—no ongoing payments per room count.</p>
     </section>
 
     <section class="screenshots">
@@ -259,6 +221,13 @@
     <footer>
         <p>&copy; 2025 HousingUI. All Rights Reserved.</p>
     </footer>
+
+    <!-- Mobile Menu Toggle -->
+    <script>
+        document.querySelector(".menu-toggle").addEventListener("click", function () {
+            document.querySelector("nav ul").classList.toggle("show");
+        });
+    </script>
 
 </body>
 </html>
