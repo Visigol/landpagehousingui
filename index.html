@@ -10,7 +10,7 @@
     <meta name="keywords" content="Automated Check-In, Airbnb Self Check-In, Contactless Entry, Vacation Rental Check-In, Hotel Automation, Smart Lock Integration, Property Management Software, Short-Term Rental Tech, Hostel Digital Check-In, Real Estate Automation, Remote Access, Keyless Hotel System, Digital Entry System, Online Check-In for Rental Properties">
     <meta name="author" content="HousingUI">
 
-    <!-- Open Graph (OG) Meta Tags for Social Media -->
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Automated Housing Check-In System">
     <meta property="og:description" content="Revolutionize property management with automated guest check-ins, smart locks, and no-contact access solutions for Airbnb, hotels, and rental properties.">
     <meta property="og:image" content="preview-image.png">
@@ -29,8 +29,8 @@
             padding: 0;
             text-align: center;
             width: 100%;
-            height: 100%;
-            overflow-x: hidden; /* Prevent horizontal scroll */
+            min-height: 100vh;
+            overflow-x: hidden; /* Prevents horizontal scrolling */
         }
 
         /* Header & Navigation */
@@ -101,11 +101,13 @@
             padding: 50px 20px;
             gap: 40px;
             flex-wrap: wrap;
+            text-align: center;
         }
 
         .hero-text {
             max-width: 500px;
-            text-align: left;
+            text-align: center;
+            margin: 0 auto;
         }
 
         .hero-images {
@@ -117,11 +119,13 @@
         .image-wrapper {
             display: flex;
             gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .image-wrapper img {
-            max-width: 600px;
-            height: 400px;
+            max-width: 90%;
+            height: auto;
             object-fit: contain;
             border-radius: 10px;
         }
@@ -129,10 +133,11 @@
         /* Features Section */
         .features {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             padding: 50px 20px;
             background: #f9f9f9;
             flex-wrap: wrap;
+            text-align: center;
         }
 
         .feature-item {
@@ -141,6 +146,8 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin: 10px;
+            flex: 1;
+            min-width: 200px;
         }
 
         /* Screenshots Section */
@@ -153,7 +160,7 @@
         }
 
         .screenshots img {
-            max-width: 600px;
+            max-width: 90%;
             border-radius: 10px;
             width: 100%;
         }
@@ -169,8 +176,7 @@
         @media (max-width: 768px) {
             html, body {
                 width: 100vw;
-                height: 100vh;
-                overflow-x: hidden; /* Prevents scrolling */
+                overflow-x: hidden; /* Prevent horizontal scrolling */
                 margin: 0;
                 padding: 0;
             }
@@ -223,25 +229,14 @@
                 gap: 10px;
             }
 
-            /* Make features stack */
-            .features {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .feature-item {
-                width: 90%;
-                margin-bottom: 20px;
-            }
-
-            /* Make screenshots stack */
+            /* Make sections full width */
+            .features,
             .screenshots {
-                flex-direction: column;
-                align-items: center;
+                width: 100%;
             }
 
             .screenshots img {
-                max-width: 90%;
+                max-width: 100%;
             }
         }
     </style>
@@ -269,12 +264,18 @@
             <p><strong>FULLY CUSTOMIZABLE TO THE NEEDS OF YOUR COMPANY</strong></p>
             <button class="btn secondary">Watch Video</button>
         </div>
-        <div class="hero-images">
-            <div class="image-wrapper">
-                <img src="image1.png" alt="Screenshot of the system">
-                <img src="loginphone.png" alt="Phone interface of the system">
-            </div>
-        </div>
+    </section>
+
+    <section class="showcase">
+        <h2>How It Works</h2>
+        <p>Automated check-in, smart lock integration, and no host intervention needed.</p>
+    </section>
+
+    <section class="features">
+        <div class="feature-item">Full Automation</div>
+        <div class="feature-item">Smart Lock Integration</div>
+        <div class="feature-item">WhatsApp & Email Support</div>
+        <div class="feature-item">One-Time Purchase – No Monthly Fees</div>
     </section>
 
     <footer>
