@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - Automated Housing Check-In</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+        }
+
+        /* Updated Header to Match Index */
+        header {
+            background: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            margin-left: 20px;
+        }
+
+        .logo img {
+            max-height: 100px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+        }
+        .cta-button {
+            background: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+
+        .cta-button {
+            background: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #6a11cb;
+        }
+
+        /* Features Section */
+        .features-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 20px 0;
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .feature img {
+            max-width: 400px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .feature-text {
+            max-width: 500px;
+            text-align: left;
+        }
+
+        footer {
+            background: black;
+            color: white;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Updated Header -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Company Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html"><button class="cta-button">Contact us</button></a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="feature">
+            <img src="googlesheetsdark.png" alt="Feature 1 Screenshot">
+            <div class="feature-text">
+                <h2>Google Sheet as Backend</h2>
+                <p><strong>Free to Use</strong></p>
+                <p>Unlike traditional database solutions that require hosting, licensing, or cloud storage costs, Google Sheets is completely free, making it an ideal choice for small to medium-sized housing businesses.</p>
+                <img src="dashboard.png" alt="Feature 1 Screenshot">
+            </div>
+        </div>
+
+        <div class="feature">
+            <img src="ttlock.png" alt="ttlocktuyia">
+            <div class="feature-text">
+                <h2><strong>Google Sheets Integration with TTLock Smart Locks</strong></h2>
+                <p><strong>Automated Smart Lock Management</strong> – No need for hosts to manually generate codes; the system does it automatically.</p>
+                <p><strong>Seamless Check-In Process</strong> – Guests receive their lock codes instantly via email or WhatsApp, reducing check-in delays.</p>
+                <p><strong>Real-Time Updates</strong></p>
+                <p><strong>Remote Control</strong></p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <img src="checkinsnip.png" alt="checkinform">
+            <div class="feature-text">
+                <h2><strong>Effortless & Secure Check-In Process</strong></h2>
+                <p><strong>Seamless Check-In Process</strong> – After making a reservation, guests automatically receive a secure check-in form.</p>
+                <p>This allows them to complete their check-in online before arrival, saving time and ensuring a smooth, hassle-free experience.</p>
+                <p>No waiting at the reception—just check in and enjoy your stay!</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <img src="emailautomation.png" alt="Feature 3 Screenshot">
+            <div class="feature-text">
+                <h2>Automated Reservation Processing & Smart Check-In</h2>
+                <p>Managing guest reservations manually can be time-consuming, but with automated email reservation fetching, the entire process becomes seamless.</p>
+                <p>Once the guest completes the check-in, the system generates and sends the correct door code linked to their assigned room, ensuring a hassle-free experience.</p>
+                <img src="image2.png" alt="Feature 3 Screenshot">
+            </div>
+        </div>
+
+        <div class="feature">
+            <img src="whatsapp1.png" alt="Feature 4 Screenshot">
+            <div class="feature-text">
+                <h2>Smart Check-In via WhatsApp – Instant & Secure</h2>
+                <p>Enhance guest experience by automatically sending Smart Check-In details via WhatsApp. This ensures a faster, more convenient, and reliable way for guests to receive their entry credentials.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <img src="image3.png" alt="Feature 5 Screenshot">
+            <div class="feature-text">
+                <h2>Secure & Authenticated Access with Our PWA</h2>
+                <p>Our Progressive Web App (PWA) ensures safe and authenticated access for managers, staff, and guests. The PWA offers offline capabilities, fast performance, and enhanced security.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <img src="tenantmobile.png" alt="Feature 6 Screenshot">
+            <div class="feature-text">
+                <h2>Personalized Tenant & Guest Dashboard</h2>
+                <p>Give your tenants and guests instant access to everything they need through a personalized dashboard. Whether it’s check-in instructions, billing details, or maintenance requests, your guests will have all the information at their fingertips.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <img src="managestaff.png" alt="manage staff feature">
+            <div class="feature-text">
+                <h2><strong>Effortless Staff Management</strong></h2>
+                <p>Managers can easily add and remove staff members, granting them access to manage guest check-ins and operations seamlessly.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 HousingUI. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

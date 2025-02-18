@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Automated Housing Check-In System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: #f9f9f9;
+        }
+
+        header {
+            background: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            margin-left: 20px;
+        }
+
+        .logo img {
+            max-height: 100px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        .cta-button {
+            background: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .pricing {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .pricing h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .pricing p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 300px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pricing-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2575fc;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .pricing-card ul li {
+            font-size: 16px;
+            padding: 8px 0;
+            color: #555;
+        }
+
+        .pricing-card .btn {
+            background: #2575fc;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .pricing-card .btn:hover {
+            background: #6a11cb;
+        }
+
+        .highlight {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+}
+
+.highlight h3,
+.highlight ul li,
+.highlight .price {
+    color: white;
+}
+
+
+        .highlight .price {
+            color: white;
+        }
+
+        .highlight .btn {
+            background: white;
+            color: #2575fc;
+        }
+
+        footer {
+            background: black;
+            color: white;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Company Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+				<li><a href="features.html">Features</a></li>
+                <li><a href="contact.html"><button class="cta-button">Contact us</button></a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section class="pricing">
+        <h2>Choose Your Plan</h2>
+        <p>Flexible pricing for businesses of all sizes. No monthly fees – just a one-time purchase!</p>
+        
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <h3>Backend Google Sheet Pack</h3>
+                <p class="price">250€</p>
+                <ul>
+                    <li>1 Customized Google Sheet</li>
+                    <li>Automated Check-Ins</li>
+                    <li>Automated Email</li>
+                    <li>Basic TTLock Smart Lock Integration</li>
+                </ul>
+                <div><a href="contact.html"><button class="cta-button">Get Started</button></a></div>
+
+            </div>
+
+            <div class="pricing-card highlight">
+                <h3>Business Pack</h3>
+                <p class="price">€500</p>
+                <ul>
+				    <li>All Backend Google Sheet Pack  Functions</li>
+                    <li>Fully Complex Google Sheet</li>
+                    <li>Front End UI</li>
+                    <li>Complex Email Automation</li>
+                    <li>Advanced TTLock Smart Lock Integration</li>
+                    <li>Multi-User Management</li>
+                </ul>
+                <div><a href="contact.html"><button class="cta-button">Best Value</button></a></div>
+
+            </div>
+
+            <div class="pricing-card">
+                <h3>Enterprise Pack</h3>
+                <p class="price">€800</p>
+                <ul>
+                    <li>All Business Pack functionalities and Services</li>
+                    <li>Full Automation Suite</li>
+                    <li>Dedicated Support</li>
+                    <li>Automated Whatsapp messages to guests</li>
+                    <li>Multi-User & API Access</li>
+					<li>Follow Up emails for Quality and reviews assurance</li>
+					<li>API Connections</li>
+                </ul>
+                <div><a href="contact.html"><button class="cta-button">Contact Us</button></a></div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 HousingUI. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

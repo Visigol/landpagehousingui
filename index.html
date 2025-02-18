@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Housing Check-In System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .logo {
+            margin-left: 20px;
+        }
+        .logo img {
+            max-height: 100px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+        }
+        .cta-button {
+            background: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 50px 20px;
+    gap: 40px;
+}
+
+.hero-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.hero-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-wrapper {
+    display: flex;
+    gap: 20px; /* Space between the images */
+}
+
+.image-wrapper img {
+    max-width: 600px; /* Maintain the width */
+    height: 400px; /* Reduce height */
+    object-fit: contain; /* Ensures the entire image is visible without cropping */
+    border-radius: 10px;
+}
+
+
+
+        .btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background: white;
+            color: black;
+        }
+        .btn.secondary {
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+            background: #f9f9f9;
+        }
+        .feature-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .app-features {
+            padding: 50px 20px;
+        }
+        .showcase {
+            padding: 50px 20px;
+            background: #fff;
+            text-align: left;
+            max-width: 800px;
+            margin: auto;
+        }
+        .screenshots {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px 20px;
+        }
+        .screenshots img {
+            max-width: 600px;
+            border-radius: 10px;
+        }
+        footer {
+            background: black;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Company Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html"><button class="cta-button">Contact us</button></a></li>
+
+                
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+    <div class="hero-text">
+        <h1>Revolutionary Automated Housing Check-In System</h1>
+        <p>From reservation to check-in, guests experience a seamless, fully automated process. Hosts gain free time while ensuring an outstanding guest experience.</p>
+        <p><strong>FULLY CUSTOMIZABLE TO THE NEEDS OF YOUR COMPANY</strong></p>
+        <button class="btn secondary">Watch Video</button>
+    </div>
+    <div class="hero-images">
+        <div class="image-wrapper">
+            <img src="image1.png" alt="Screenshot of the system">
+            <img src="loginphone.png" alt="Phone interface of the system">
+        </div>
+    </div>
+</section>
+
+    
+    <section class="showcase">
+        <h2>How It Works</h2>
+        <p>Our system automates the entire check-in process, sending door codes directly via the internet to smart locks (TTLock). Guests receive their access codes via email and WhatsApp Business, eliminating the need for host intervention.</p>
+        <p>The system also automates email follow-ups to track guest satisfaction and feedback.</p>
+        <p>Unlike competitors, our solution requires no monthly fees. Simply purchase a pack, and it’s yours forever—no ongoing payments per room count.</p>
+    </section>
+    
+    <section class="screenshots">
+        <img src="dashboard.png" alt="System Dashboard">
+        <img src="tenantdashboard.png" alt="Tenant Dashboard">
+    </section>
+    
+    <section class="features">
+        <div class="feature-item">Full Automation</div>
+        <div class="feature-item">Smart Lock Integration</div>
+        <div class="feature-item">WhatsApp & Email Support</div>
+        <div class="feature-item">One-Time Purchase – No Monthly Fees</div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 HousingUI. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
