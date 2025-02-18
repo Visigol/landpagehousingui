@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automated Housing Check-In System</title>
+    <title>Automated Housing Check-In System | Smart Lock & Contactless Entry</title>
 
     <!-- SEO Meta Tags -->
     <meta name="description" content="Automate guest check-ins for Airbnb, hotels, hostels, apartments, and vacation rentals. Reduce workload, save time, and improve guest experience with an advanced online check-in system.">
     <meta name="keywords" content="Automated Check-In, Airbnb Self Check-In, Contactless Entry, Vacation Rental Check-In, Hotel Automation, Smart Lock Integration, Property Management Software, Short-Term Rental Tech, Hostel Digital Check-In, Real Estate Automation, Remote Access, Keyless Hotel System, Digital Entry System, Online Check-In for Rental Properties">
     <meta name="author" content="HousingUI">
 
-    <!-- Open Graph Meta Tags -->
+    <!-- Open Graph (OG) Meta Tags for Social Media -->
     <meta property="og:title" content="Automated Housing Check-In System">
     <meta property="og:description" content="Revolutionize property management with automated guest check-ins, smart locks, and no-contact access solutions for Airbnb, hotels, and rental properties.">
     <meta property="og:image" content="preview-image.png">
@@ -22,16 +22,15 @@
 
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* GENERAL STYLES */
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
-            overflow-x: hidden; /* Prevents horizontal scrolling */
         }
 
-        /* HEADER & NAVIGATION */
+        /* Header & Navigation */
         header {
             background: white;
             padding: 20px;
@@ -80,7 +79,7 @@
             cursor: pointer;
         }
 
-        /* HERO SECTION */
+        /* Hero Section */
         .hero {
             display: flex;
             justify-content: center;
@@ -109,12 +108,12 @@
 
         .image-wrapper img {
             max-width: 600px;
-            height: auto;
+            height: 400px;
             object-fit: contain;
             border-radius: 10px;
         }
 
-        /* FEATURES SECTION */
+        /* Features Section */
         .features {
             display: flex;
             justify-content: space-around;
@@ -129,7 +128,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* SCREENSHOTS SECTION */
+        /* Screenshots Section */
         .screenshots {
             display: flex;
             justify-content: center;
@@ -142,52 +141,62 @@
             border-radius: 10px;
         }
 
-        /* FOOTER */
+        /* Footer */
         footer {
             background: black;
             color: white;
             padding: 20px;
         }
 
-        /* ====== MOBILE RESPONSIVENESS (Only affects mobile, not desktop) ====== */
-        @media (max-width: 768px) {
-            body {
-                overflow-x: hidden; /* Prevents horizontal scrolling */
-            }
+        /* ========= MOBILE RESPONSIVENESS ========= */
+        <style>
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+        html, body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden; /* Prevents scrolling */
+            margin: 0;
+            padding: 0;
+        }
 
-            /* MOBILE MENU */
+        /* Hide the normal menu */
+        nav ul {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            right: 0;
+            width: 200px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul.active {
+            display: flex;
+        }
+
+        nav ul li {
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Hamburger Icon */
+        .menu-toggle {
+            display: block;
+            cursor: pointer;
+            font-size: 30px;
+            padding: 10px;
+        }
+
+        /* Hide the button in desktop view */
+        @media (min-width: 769px) {
             .menu-toggle {
-                display: block;
-                font-size: 28px;
-                cursor: pointer;
-                background: none;
-                border: none;
-                color: #2575fc;
-            }
-
-            nav ul {
                 display: none;
-                flex-direction: column;
-                text-align: center;
-                background: white;
-                width: 100%;
-                padding: 10px 0;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
             }
 
-            nav ul.show {
-                display: flex;
-            }
-
-            nav ul li {
-                display: block;
-                padding: 10px 0;
-            }
-
-            /* MAKE SECTIONS STACK */
+            /* Stack sections */
             .hero {
                 flex-direction: column;
                 text-align: center;
@@ -208,10 +217,7 @@
                 gap: 10px;
             }
 
-            .image-wrapper img {
-                max-width: 100%;
-            }
-
+            /* Make features stack */
             .features {
                 flex-direction: column;
                 align-items: center;
@@ -222,38 +228,54 @@
                 margin-bottom: 20px;
             }
 
+            /* Make screenshots stack */
             .screenshots {
                 flex-direction: column;
                 align-items: center;
             }
 
             .screenshots img {
-                max-width: 100%;
+                max-width: 90%;
             }
+			
         }
     </style>
 </head>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navMenu = document.querySelector("nav ul");
+
+        menuToggle.addEventListener("click", function() {
+            navMenu.classList.toggle("active");
+        });
+    });
+</script>
+
+
 <body>
 
     <header>
-        <div class="logo">
-            <img src="logo.png" alt="Company Logo">
-        </div>
-        <button class="menu-toggle">&#9776;</button>
-        <nav>
-            <ul>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="contact.html"><button class="cta-button">Contact us</button></a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="logo">
+        <img src="logo.png" alt="Company Logo">
+    </div>
+    <div class="menu-toggle">&#9776;</div> <!-- Hamburger Menu -->
+    <nav>
+        <ul>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html"><button class="cta-button">Contact us</button></a></li>
+        </ul>
+    </nav>
+</header>
 
     <section class="hero">
         <div class="hero-text">
             <h1>Revolutionary Automated Housing Check-In System</h1>
             <p>From reservation to check-in, guests experience a seamless, fully automated process. Hosts gain free time while ensuring an outstanding guest experience.</p>
             <p><strong>FULLY CUSTOMIZABLE TO THE NEEDS OF YOUR COMPANY</strong></p>
+            <button class="btn secondary">Watch Video</button>
         </div>
         <div class="hero-images">
             <div class="image-wrapper">
@@ -263,16 +285,28 @@
         </div>
     </section>
 
+    <section class="showcase">
+        <h2>How It Works</h2>
+        <p>Our system automates the entire check-in process, sending door codes directly via the internet to smart locks (TTLock). Guests receive their access codes via email and WhatsApp Business, eliminating the need for host intervention.</p>
+        <p>The system also automates email follow-ups to track guest satisfaction and feedback.</p>
+        <p>Unlike competitors, our solution requires no monthly fees. Simply purchase a pack, and it’s yours forever—no ongoing payments per room count.</p>
+    </section>
+
+    <section class="screenshots">
+        <img src="dashboard.png" alt="System Dashboard">
+        <img src="tenantdashboard.png" alt="Tenant Dashboard">
+    </section>
+
+    <section class="features">
+        <div class="feature-item">Full Automation</div>
+        <div class="feature-item">Smart Lock Integration</div>
+        <div class="feature-item">WhatsApp & Email Support</div>
+        <div class="feature-item">One-Time Purchase – No Monthly Fees</div>
+    </section>
+
     <footer>
         <p>&copy; 2025 HousingUI. All Rights Reserved.</p>
     </footer>
-
-    <!-- Mobile Menu Toggle -->
-    <script>
-        document.querySelector(".menu-toggle").addEventListener("click", function () {
-            document.querySelector("nav ul").classList.toggle("show");
-        });
-    </script>
 
 </body>
 </html>
