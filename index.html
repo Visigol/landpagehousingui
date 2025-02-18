@@ -315,6 +315,16 @@
     <footer>
         <p>&copy; 2025 HousingUI. All Rights Reserved.</p>
     </footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navMenu = document.querySelector("nav ul");
+
+        menuToggle.addEventListener("click", function() {
+            navMenu.classList.toggle("active");
+        });
+    });
+</script>
 
 </body>
 </html>
