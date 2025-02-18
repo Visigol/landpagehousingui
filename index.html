@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,11 +23,14 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         /* General Styles */
-        body {
+        body, html {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
 
         /* Header & Navigation */
@@ -38,6 +41,7 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #ddd;
+            position: relative;
         }
 
         .logo {
@@ -79,6 +83,14 @@
             cursor: pointer;
         }
 
+        /* Mobile Navigation */
+        .menu-toggle {
+            display: none; /* Hide by default */
+            font-size: 30px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
         /* Hero Section */
         .hero {
             display: flex;
@@ -88,6 +100,7 @@
             color: white;
             padding: 50px 20px;
             gap: 40px;
+            flex-wrap: wrap;
         }
 
         .hero-text {
@@ -119,6 +132,7 @@
             justify-content: space-around;
             padding: 50px 20px;
             background: #f9f9f9;
+            flex-wrap: wrap;
         }
 
         .feature-item {
@@ -126,6 +140,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
         }
 
         /* Screenshots Section */
@@ -134,11 +149,13 @@
             justify-content: center;
             gap: 20px;
             padding: 50px 20px;
+            flex-wrap: wrap;
         }
 
         .screenshots img {
             max-width: 600px;
             border-radius: 10px;
+            width: 100%;
         }
 
         /* Footer */
@@ -149,51 +166,40 @@
         }
 
         /* ========= MOBILE RESPONSIVENESS ========= */
-        <style>
-    /* Mobile adjustments */
-    @media (max-width: 768px) {
-        html, body {
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden; /* Prevents scrolling */
-            margin: 0;
-            padding: 0;
-        }
+        @media (max-width: 768px) {
+            html, body {
+                width: 100vw;
+                height: 100vh;
+                overflow-x: hidden; /* Prevents scrolling */
+                margin: 0;
+                padding: 0;
+            }
 
-        /* Hide the normal menu */
-        nav ul {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 70px;
-            right: 0;
-            width: 200px;
-            background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        nav ul.active {
-            display: flex;
-        }
-
-        nav ul li {
-            text-align: center;
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        /* Hamburger Icon */
-        .menu-toggle {
-            display: block;
-            cursor: pointer;
-            font-size: 30px;
-            padding: 10px;
-        }
-
-        /* Hide the button in desktop view */
-        @media (min-width: 769px) {
+            /* Hide desktop menu and show hamburger */
             .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
                 display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                right: 0;
+                width: 200px;
+                background: white;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                padding: 10px 0;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                text-align: center;
+                padding: 10px 0;
+                border-bottom: 1px solid #ddd;
             }
 
             /* Stack sections */
@@ -237,38 +243,24 @@
             .screenshots img {
                 max-width: 90%;
             }
-			
         }
     </style>
 </head>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const menuToggle = document.querySelector(".menu-toggle");
-        const navMenu = document.querySelector("nav ul");
-
-        menuToggle.addEventListener("click", function() {
-            navMenu.classList.toggle("active");
-        });
-    });
-</script>
-
-
 <body>
 
     <header>
-    <div class="logo">
-        <img src="logo.png" alt="Company Logo">
-    </div>
-    <div class="menu-toggle">&#9776;</div> <!-- Hamburger Menu -->
-    <nav>
-        <ul>
-            <li><a href="features.html">Features</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="contact.html"><button class="cta-button">Contact us</button></a></li>
-        </ul>
-    </nav>
-</header>
+        <div class="logo">
+            <img src="logo.png" alt="Company Logo">
+        </div>
+        <div class="menu-toggle">&#9776;</div> <!-- Hamburger Menu -->
+        <nav>
+            <ul>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html"><button class="cta-button">Contact us</button></a></li>
+            </ul>
+        </nav>
+    </header>
 
     <section class="hero">
         <div class="hero-text">
@@ -285,28 +277,20 @@
         </div>
     </section>
 
-    <section class="showcase">
-        <h2>How It Works</h2>
-        <p>Our system automates the entire check-in process, sending door codes directly via the internet to smart locks (TTLock). Guests receive their access codes via email and WhatsApp Business, eliminating the need for host intervention.</p>
-        <p>The system also automates email follow-ups to track guest satisfaction and feedback.</p>
-        <p>Unlike competitors, our solution requires no monthly fees. Simply purchase a pack, and it’s yours forever—no ongoing payments per room count.</p>
-    </section>
-
-    <section class="screenshots">
-        <img src="dashboard.png" alt="System Dashboard">
-        <img src="tenantdashboard.png" alt="Tenant Dashboard">
-    </section>
-
-    <section class="features">
-        <div class="feature-item">Full Automation</div>
-        <div class="feature-item">Smart Lock Integration</div>
-        <div class="feature-item">WhatsApp & Email Support</div>
-        <div class="feature-item">One-Time Purchase – No Monthly Fees</div>
-    </section>
-
     <footer>
         <p>&copy; 2025 HousingUI. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navMenu = document.querySelector("nav ul");
+
+            menuToggle.addEventListener("click", function() {
+                navMenu.classList.toggle("active");
+            });
+        });
+    </script>
 
 </body>
 </html>
