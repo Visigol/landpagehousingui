@@ -274,6 +274,10 @@
     </footer>
 
     <script>
+
+          document.querySelector(".menu-toggle").addEventListener("click", function () {
+            document.getElementById("mobileMenu").classList.toggle("show");
+        });
         document.getElementById("contactForm").addEventListener("submit", function(event) {
             event.preventDefault();
 
