@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Automated Housing Check-In</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Frequently Asked Questions about our Automated Housing Check-In System. Learn how our solution works, pricing, smart lock integration, and more.">
+    <meta name="keywords" content="Check-In Automation FAQs, Airbnb Smart Lock Questions, Rental Property Management FAQ, Self Check-In System Help, Digital Guest Management Support">
+    <meta name="author" content="HousingUI">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="FAQs - Automated Housing Check-In">
+    <meta property="og:description" content="Find answers to common questions about our Automated Check-In System. Learn about setup, features, and integrations.">
+    <meta property="og:image" content="faq-preview.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/faqs.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: #f9f9f9;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            margin-left: 20px;
+        }
+
+        .logo img {
+            max-height: 100px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: underline;
+            color: #2575fc;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #6a11cb;
+        }
+
+        .cta-button {
+            background: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 60px 20px;
+            text-align: left;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .faq-question {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2575fc;
+            margin: 0;
+        }
+
+        .faq-answer {
+            display: none;
+            font-size: 18px;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: black;
+            color: white;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* ====== MOBILE RESPONSIVENESS ONLY ====== */
+        @media (max-width: 768px) {
+            body {
+                overflow-x: hidden;
+            }
+
+            /* Mobile Menu */
+            .menu-toggle {
+                display: block;
+                font-size: 28px;
+                cursor: pointer;
+                background: none;
+                border: none;
+                color: #2575fc;
+                margin-right: 20px;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                text-align: center;
+                background: white;
+                width: 100%;
+                padding: 10px 0;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                display: block;
+                padding: 10px 0;
+            }
+
+            .faq-section {
+                width: 90%;
+            }
+        }
+
+        /* Hide menu button on desktop */
+        @media (min-width: 769px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Company Logo">
+        </div>
+        <button class="menu-toggle">&#9776;</button>
+        <nav>
+            <ul id="mobileMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <p class="faq-question">How does the Automated Check-In system work?</p>
+            <p class="faq-answer">Our system integrates with smart locks (TTLock) and Google Sheets to automatically generate and send access codes to guests via email and WhatsApp.</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-question">Is the system compatible with my smart locks?</p>
+            <p class="faq-answer">Our platform supports TTLock-enabled smart locks. If you have a different brand, contact us to check for compatibility.</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-question">Is there a monthly fee?</p>
+            <p class="faq-answer">No! Unlike other solutions, our system is a one-time purchase with no recurring costs.</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-question">Can I customize the system for my business needs?</p>
+            <p class="faq-answer">Yes! Our system is fully customizable to suit hotels, Airbnb hosts, vacation rentals, and long-term property managers.</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-question">How do guests receive their access codes?</p>
+            <p class="faq-answer">Once a reservation is processed, the system automatically sends an email and WhatsApp message with the access code.</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-question">What happens if a guest has issues with check-in?</p>
+            <p class="faq-answer">We provide automated customer support options, and property managers can manually issue codes if needed.</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-question">How secure is the system?</p>
+            <p class="faq-answer">We use secure authentication methods and integrate with TTLock for encrypted key management.</p>
+        </div>
+		
+		<div class="faq-item">
+    <p class="faq-question">How can I purchase this system?</p>
+    <p class="faq-answer">
+        If you are interested in acquiring our **Automated Housing Check-In System**, the first step is to contact us expressing your interest. 
+        We will then schedule a **brief video consultation** to better understand your specific needs and business model. 
+        This allows us to tailor a **fully customized version** that aligns with your operational workflow and guest management processes. 
+        
+        During the consultation, we will walk you through how the system works, its features, and the available package options. 
+        The implementation timeline depends on the selected package and the complexity of the required customizations. 
+        
+        <strong>Development and deployment typically range from 1 to 6 weeks</strong>, ensuring that the system is fully set up, tested, and ready for seamless operation by you and your guests.
+    </p>
+</div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 HousingUI. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelector(".menu-toggle").addEventListener("click", function () {
+            document.getElementById("mobileMenu").classList.toggle("show");
+        });
+
+        document.querySelectorAll(".faq-item").forEach(item => {
+            item.addEventListener("click", function () {
+                this.classList.toggle("active");
+            });
+        });
+    </script>
+
+</body>
+</html>
