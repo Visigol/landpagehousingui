@@ -4,15 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Automated Housing Check-In</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Contact us for more information about our Automated Housing Check-In System. Get in touch with our team to automate your rental property check-in.">
+    <meta name="keywords" content="Contact Automated Check-In, Airbnb Check-In Automation Support, Vacation Rental Tech Inquiry, Smart Lock Integration Help, Property Management Automation Support">
+    <meta name="author" content="HousingUI">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact Us - Automated Housing Check-In">
+    <meta property="og:description" content="Need help with our Automated Check-In system? Contact us for assistance with smart locks, rental automation, and digital guest management.">
+    <meta property="og:image" content="preview-image.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/contact.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <style>
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
             background: #f9f9f9;
+            overflow-x: hidden; /* Prevents horizontal scrolling */
         }
 
+        /* Header & Navigation */
         header {
             background: white;
             padding: 20px;
@@ -41,6 +60,17 @@
             display: inline;
         }
 
+        nav ul li a {
+            text-decoration: underline;
+            color: #2575fc;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #6a11cb;
+        }
+
         .cta-button {
             background: blue;
             color: white;
@@ -50,6 +80,7 @@
             cursor: pointer;
         }
 
+        /* Contact Section */
         .contact-section {
             display: flex;
             justify-content: center;
@@ -130,11 +161,73 @@
             text-align: center;
         }
 
+        /* Footer */
         footer {
             background: black;
             color: white;
             padding: 20px;
             margin-top: 50px;
+        }
+
+        /* ====== MOBILE RESPONSIVENESS ONLY ====== */
+        @media (max-width: 768px) {
+            body {
+                overflow-x: hidden; /* Prevents horizontal scrolling */
+            }
+
+            /* Mobile Menu */
+            .menu-toggle {
+                display: block;
+                font-size: 28px;
+                cursor: pointer;
+                background: none;
+                border: none;
+                color: #2575fc;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                text-align: center;
+                background: white;
+                width: 100%;
+                padding: 10px 0;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                display: block;
+                padding: 10px 0;
+            }
+
+            .contact-section {
+                flex-direction: column;
+                width: 90%;
+                gap: 20px;
+            }
+
+            .contact-form {
+                width: 100%;
+            }
+
+            .contact-info {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* Hide menu button on desktop */
+        @media (min-width: 769px) {
+            .menu-toggle {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -144,12 +237,12 @@
         <div class="logo">
             <img src="logo.png" alt="Company Logo">
         </div>
+        <button class="menu-toggle">&#9776;</button>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-				<li><a href="features.html">Features</a></li>
+                <li><a href="features.html">Features</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
-                
             </ul>
         </nav>
     </header>
@@ -206,6 +299,10 @@
             });
         });
     </script>
+
+</body>
+</html>
+
 
 </body>
 </html>
