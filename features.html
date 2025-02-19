@@ -83,40 +83,54 @@
         }
 
         /* Features Section */
-        .features-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 50px 20px;
-        }
+       /* Features Section */
+.features-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
 
-        .feature {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            max-width: 1000px;
-            margin: 20px 0;
-            background: white;
-            color: black;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+/* Ensure all .feature divs have the same size */
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    height: 300px; /* Set a fixed height to keep uniform size */
+    margin: 20px 0;
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevents content from overflowing */
+}
 
-        .feature:nth-child(even) {
-            flex-direction: row-reverse;
-        }
+/* Alternate alignment for even-numbered features */
+.feature:nth-child(even) {
+    flex-direction: row-reverse;
+}
 
-        .feature img {
-            max-width: 400px;
-            border-radius: 10px;
-            margin: 20px;
-        }
+/* Uniform image sizes */
+.feature img {
+    width: 40%; /* Keep consistent width */
+    max-width: 300px; /* Prevents oversized images */
+    height: 100%; /* Ensures all images are the same height */
+    object-fit: contain; /* Keeps the aspect ratio without cutting off content */
+    border-radius: 10px;
+}
 
-        .feature-text {
-            max-width: 500px;
-            text-align: left;
-        }
+/* Uniform text block sizes */
+.feature-text {
+    width: 50%; /* Ensures text block is consistent across all divs */
+    max-width: 500px;
+    text-align: left;
+    height: 100%; /* Matches the fixed height of .feature */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers text vertically */
+}
 
         /* Footer */
         footer {
@@ -166,21 +180,25 @@
 
             /* Stack Features for Mobile */
             .feature {
-                flex-direction: column !important;
-                text-align: center;
-                max-width: 95%;
-            }
+        flex-direction: column !important;
+        height: auto; /* Adjust height for mobile */
+        text-align: center;
+        padding: 15px;
+    }
 
-            .feature img {
-                max-width: 100%;
-                margin: 10px 0;
-            }
+    .feature img {
+        width: 90%;
+        max-width: 90%;
+        height: auto;
+        margin-bottom: 10px;
+    }
 
-            .feature-text {
-                max-width: 100%;
-                text-align: center;
-            }
-        }
+    .feature-text {
+        width: 100%;
+        text-align: center;
+        height: auto;
+    }
+}
 
         /* Hide menu button on desktop */
         @media (min-width: 769px) {
