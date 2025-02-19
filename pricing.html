@@ -4,15 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing - Automated Housing Check-In System</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Affordable pricing plans for an Automated Housing Check-In System. No monthly fees! Choose from Google Sheets integration, Business, and Enterprise plans.">
+    <meta name="keywords" content="Automated Check-In Pricing, Smart Lock System Cost, Airbnb Self Check-In Packages, Vacation Rental Management Software, Hotel Automation Pricing, Keyless Entry Pricing, Short-Term Rental Tech Plans, Property Management Automation">
+    <meta name="author" content="HousingUI">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pricing - Automated Housing Check-In System">
+    <meta property="og:description" content="Choose the best pricing plan for your rental property or hotel. Get an affordable automated check-in solution with no monthly fees!">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/pricing.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpg" href="favicon.jpg">
+
     <style>
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
             background: #f9f9f9;
+            overflow-x: hidden; /* Prevents horizontal scrolling */
         }
 
+        /* Header & Navigation */
         header {
             background: white;
             padding: 20px;
@@ -41,6 +60,17 @@
             display: inline;
         }
 
+        nav ul li a {
+            text-decoration: underline;
+            color: #2575fc;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #6a11cb;
+        }
+
         .cta-button {
             background: blue;
             color: white;
@@ -50,6 +80,7 @@
             cursor: pointer;
         }
 
+        /* Pricing Section */
         .pricing {
             text-align: center;
             padding: 60px 20px;
@@ -124,18 +155,14 @@
             background: #6a11cb;
         }
 
+        /* Highlighted Card */
         .highlight {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
-}
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+        }
 
-.highlight h3,
-.highlight ul li,
-.highlight .price {
-    color: white;
-}
-
-
+        .highlight h3,
+        .highlight ul li,
         .highlight .price {
             color: white;
         }
@@ -145,11 +172,68 @@
             color: #2575fc;
         }
 
+        /* Footer */
         footer {
             background: black;
             color: white;
             padding: 20px;
             margin-top: 50px;
+        }
+
+        /* ====== MOBILE RESPONSIVENESS ONLY ====== */
+        @media (max-width: 768px) {
+            body {
+                overflow-x: hidden; /* Prevents horizontal scrolling */
+            }
+
+            /* Mobile Menu */
+            .menu-toggle {
+                display: block;
+                font-size: 28px;
+                cursor: pointer;
+                background: none;
+                border: none;
+                color: #2575fc;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                text-align: center;
+                background: white;
+                width: 100%;
+                padding: 10px 0;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                display: block;
+                padding: 10px 0;
+            }
+
+            .pricing-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .pricing-card {
+                width: 90%;
+                max-width: 400px;
+            }
+        }
+
+        /* Hide menu button on desktop */
+        @media (min-width: 769px) {
+            .menu-toggle {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -159,12 +243,12 @@
         <div class="logo">
             <img src="logo.png" alt="Company Logo">
         </div>
+        <button class="menu-toggle">&#9776;</button>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-				<li><a href="features.html">Features</a></li>
+                <li><a href="features.html">Features</a></li>
                 <li><a href="contact.html"><button class="cta-button">Contact us</button></a></li>
-
             </ul>
         </nav>
     </header>
@@ -176,7 +260,7 @@
         <div class="pricing-container">
             <div class="pricing-card">
                 <h3>Backend Google Sheet Pack</h3>
-                <p class="price">250€</p>
+                <p class="price">€250</p>
                 <ul>
                     <li>1 Customized Google Sheet</li>
                     <li>Automated Check-Ins</li>
@@ -184,38 +268,18 @@
                     <li>Basic TTLock Smart Lock Integration</li>
                 </ul>
                 <div><a href="contact.html"><button class="cta-button">Get Started</button></a></div>
-
             </div>
 
             <div class="pricing-card highlight">
                 <h3>Business Pack</h3>
                 <p class="price">€500</p>
                 <ul>
-				    <li>All Backend Google Sheet Pack  Functions</li>
+                    <li>All Backend Google Sheet Pack Functions</li>
                     <li>Fully Complex Google Sheet</li>
                     <li>Front End UI</li>
                     <li>Complex Email Automation</li>
-                    <li>Advanced TTLock Smart Lock Integration</li>
-                    <li>Multi-User Management</li>
                 </ul>
                 <div><a href="contact.html"><button class="cta-button">Best Value</button></a></div>
-
-            </div>
-
-            <div class="pricing-card">
-                <h3>Enterprise Pack</h3>
-                <p class="price">€800</p>
-                <ul>
-                    <li>All Business Pack functionalities and Services</li>
-                    <li>Full Automation Suite</li>
-                    <li>Dedicated Support</li>
-                    <li>Automated Whatsapp messages to guests</li>
-                    <li>Multi-User & API Access</li>
-					<li>Follow Up emails for Quality and reviews assurance</li>
-					<li>API Connections</li>
-                </ul>
-                <div><a href="contact.html"><button class="cta-button">Contact Us</button></a></div>
-
             </div>
         </div>
     </section>
@@ -223,6 +287,12 @@
     <footer>
         <p>&copy; 2025 HousingUI. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        document.querySelector(".menu-toggle").addEventListener("click", function () {
+            document.querySelector("nav ul").classList.toggle("show");
+        });
+    </script>
 
 </body>
 </html>
